@@ -1,38 +1,45 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
-int get_length(int arr[]);
+void print_min(int min);
+void print_max(int max);
+bool is_grater(int a, int b);
+bool is_less(int a, int b);
 
 int main() {
-    int min, max, nums_arr[5] = {};
-    
+    int min, max, nums_arr[3] = {};
+
     cout << "Enter numbers: ";
-    cin >> nums_arr[0] >> nums_arr[1] >> nums_arr[2] >> nums_arr[3] >> nums_arr[4];
-    
+    cin >> nums_arr[0] >> nums_arr[1] >> nums_arr[2];
+
     max = nums_arr[0];
     min = nums_arr[0];
-    
-    int length = get_length(nums_arr);
-    cout << length;
+
+    int length = sizeof(nums_arr) / sizeof(nums_arr[0]);
+
     for (int i = 0; i < length; i++) {
-        if (nums_arr[i] > max) {
-            max = nums_arr[i];
-        }
-        
-        if (nums_arr[i] < min) {
-            min = nums_arr[i];
-        }
+        if (is_grater(nums_arr[i], max)) max = nums_arr[i];
+        if (is_less(nums_arr[i], min)) min = nums_arr[i];
     }
-    
-    cout << "Max: " << max << endl;
-    cout << "Min: " << min << endl;
-    
+
+    print_max(max);
+    print_min(min);
+
     return 0;
 }
 
-int get_length(int arr) {
-    cout << sizeof(arr) << "  " ;
-    return sizeof(arr) / 4;
+void print_min(int min) {
+    cout << "Minimum: " << min << endl;
 }
 
+void print_max(int max) {
+    cout << "Minimum: " << max << endl;
+}
+
+bool is_grater(int a, int b) {
+    return a > b;
+}
+
+bool is_less(int a, int b) {
+    return a < b;
+}

@@ -10,8 +10,8 @@ int main() {
     
     cout << "Enter radius: "; cin >> radius;
     
-    cout << "Circumference circle: " << circumference_circle(radius) << endl;
-    cout << "Area circle: " << area_circle(radius) << endl;
+    cout << "Circumference circle: " << circumference_circle(radius);
+    cout << "Area circle: " << area_circle(radius);
 
     return 0;
 }

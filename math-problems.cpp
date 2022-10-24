@@ -1,4 +1,4 @@
-/* Problem: Hypotheses Collatz
+// Problem: Hypotheses Collatz
 #include <iostream>
 using namespace std;
 
@@ -48,4 +48,4 @@ bool is_even(int number) {
 
 bool is_grater(int a, int b) {
     return a > b;
-} */
+}

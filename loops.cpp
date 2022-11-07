@@ -272,3 +272,38 @@ int main() {
         cout << "The depth is 0" << endl;
     }
 } */
+
+
+/* Problem 15
+int main() {
+    int count = 0;
+    unsigned max = -1;
+    
+    cout << "Count of: ";
+    cin >> count;
+    
+    for (int i = 2; i <= max; i++) {
+        bool is_prime = true;
+        
+        for (int z = 2; z < i; z++) {
+            if (i % z == 0) {
+                is_prime = false;
+                break;
+            }
+        }
+        
+        if (is_prime) {
+            if (i != 2) cout << ", ";
+            cout << i;
+            count--;
+        }
+        
+        if (count == 0) {
+            cout << endl;
+            break;
+        }
+    }
+
+    return 0;
+} */
+
